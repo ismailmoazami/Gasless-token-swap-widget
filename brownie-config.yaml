@@ -1,0 +1,28 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.6.0
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+  
+
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0'
+
+networks:
+  default: development
+
+  development:
+    verify: False
+  rinkeby:
+    verify: True
+    gas_limit: 1000000
+  mainnet-fork:
+    verify: False
+  ganache-local2: 
+    verify: False
+    
+
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
+
